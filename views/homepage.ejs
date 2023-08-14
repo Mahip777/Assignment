@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+     <h1> Zluri Assignment</h1>
+    <h1>
+        Select file
+    </h1>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+        <div class="mb-3">
+<label class="form-label"> Please select a CSV file only </label>
+                <input type="file" class="form-control" name="profile" /> <br>
+
+                <button type="submit" class="btn btn-secondary">Upload file</button>
+        </div>
+
+          
+            
+    </form>
+
+
+    <form action="/recieve" method="POST">
+        <div class="mb-3">
+        <h1>
+            Get a transaction
+        </h1>
+
+        <label class="form-label"> Get specefic transactions (between start date and end date) </label>
+
+        <input type="text" id="rsdate" class="form-control" name="rsdate" placeholder="Please enter starting date (YYYY-MM-DD)" />
+        <input type="text" name="rfdate" class="form-control" placeholder="Please enter ending  date (YYYY-MM-DD)" />
+        <br>
+        <input type="submit" class="btn btn-secondary"></input>
+
+        </div>
+    </form>
+
+    <form action="/recieveamt" method="POST">
+        <div class="mb-3">
+            <h1>
+                Get a transaction (Mention currency and amount)
+            </h1>
+    
+            <label class="form-label"> Get specefic transactions (between two amount) </label>
+    
+            <input type="text" id="rcurr" class="form-control" name="rcurr" placeholder="Please enter currency" />
+            <input type="text" id="rsamt" name="rsamt" class="form-control" placeholder="Please choose starting amount of transaction" />
+            <input type="text" id="rfamt" name="rfamt" class="form-control" placeholder="Please choose limiting amount of transaction" />
+            <br>
+            <input type="submit" class="btn btn-secondary"></input>
+    
+        </div>
+    </form>
+
+    <form action="/edit" method="POST" >
+    <div class="mb-3">
+       <h1>
+        Editing transaction
+       </h1>
+    <label class="form-label">Fill details of the transaction that you want to edit</label>
+   
+    <br><br>
+    <input type="text" class="form-control"  id="edate" name="edate" placeholder="Please enter date" />
+    <input type="text" class="form-control"  name="edescription" placeholder="Please enter description" />
+    <input type="text" class="form-control"  name="ecurrency" placeholder="Please enter currency" />
+    <input type="text" class="form-control"  name="eamount" placeholder="Please enter amount" />
+<br>
+    <p class="form-label"> 
+        Enter the new values below 
+        </p>
+
+        <select class="form-select" name="cars" id="cars">
+            <option id="1" value="Date">Date</option>
+            <option id="2" value="Description">Description</option>
+            <option id="3" value="Currency">Currency</option>
+            <option id="4" value="Amount">Amount</option>
+        </select>
+<br>
+    <input type="text" name="ndata" class="form-control" placeholder="Please enter new value" /><br>
+    
+
+        <input type="submit" class="btn btn-secondary"></input>
+
+    </div>
+    </form>
+
+    <form action="/insert" method="POST">
+    <div class="mb-3">
+        <h1>
+            Inserting transaction
+        </h1>
+        <label class="form-label">Fill details of the new transaction </label>
+    
+        <br><br>
+        <input type="text" class="form-control" id="idate" name="idate" placeholder="Please enter date" />
+        <input type="text" class="form-control" name="idescription" placeholder="Please enter description" />
+        <input type="text" class="form-control" name="icurrency" placeholder="Please enter currency" />
+        <input type="text" class="form-control" name="iamount" placeholder="Please enter amount" />
+    
+       
+    
+       
+    <br>
+        
+    
+        <input type="submit" class="btn btn-secondary"></input>
+    
+    </div>
+    </form>
+
+    <form action="/delete" method="POST">
+    <div class="mb-3">
+        <h1>
+            Deleting transaction
+        </h1>
+        <label class="form-label">Fill details of the transaction that you want to delete </label>
+    
+        <br><br>
+        <input type="text" class="form-control" id="mdate" name="mdate" placeholder="Please enter date" />
+        <input type="text" class="form-control" name="mdescription" placeholder="Please enter description" />
+        <input type="text" class="form-control" name="mcurrency" placeholder="Please enter currency" />
+        <input type="text" class="form-control" name="mamount" placeholder="Please enter amount" />
+    
+    
+    
+    
+        <br>
+    
+    
+        <input type="submit"  class="btn btn-secondary"> </input>
+    
+    </div>
+    </form>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+ 
+</body>
+</html>
