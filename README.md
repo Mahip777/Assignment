@@ -13,4 +13,4 @@ I selected the file from UI and parsed it there itself using File Reader and sen
 //Approach3 (code shared for this method)
 I uploaded the file using multer and converted it into json format using CSVtoJson and sent it to MongoDB. I created GET, Insert, Delete and Edit API after that.
 
-The Exchange-rates-api is not fetching exchange rates and probably is not working. Money.js wasn't of much help either because it showed that the given exchange rate is not available. 
+Used exchange-rates-api for currency conversion. 
